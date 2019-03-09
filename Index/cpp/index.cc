@@ -73,11 +73,6 @@ namespace doc_index
         _jieba.CutForSearch(title,words);
         //words中的分词结果中包含一个offset（当前次在文档中起始位置的下标）
         //我们所需要的是一个前闭后开区间
-        if(words.size()<=1)
-        {
-            LOG(FATAL)<<"SplitTitle Error!!";
-            return;
-        }
         for(size_t i=0;i<words.size();++i)
         {
             auto* token = doc_info->add_title_token();
