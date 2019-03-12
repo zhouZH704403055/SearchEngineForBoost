@@ -71,7 +71,7 @@ namespace doc_index
     {
         std::vector<cppjieba::Word> words;
         _jieba.CutForSearch(title,words);
-        //words中的分词结果中包含一个offset（当前次在文档中起始位置的下标）
+        //words中的分词结果中包含一个offset（当前词在文档中起始位置的下标）
         //我们所需要的是一个前闭后开区间
         for(size_t i=0;i<words.size();++i)
         {
